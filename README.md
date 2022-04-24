@@ -1,8 +1,7 @@
 Hi 👋 My name is Erick Briones
 ==============================
 
-Fullstack Developer
--------------------
+![snake gif](https://github.com/erick-brsa/erick-brsa/blob/output/github-contribution-grid-snake.gif)
 
 Creativity, responsibility and charisma are the words that define me.
 
