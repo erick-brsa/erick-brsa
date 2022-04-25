@@ -52,10 +52,6 @@ src="https://img.shields.io/github/followers/erick-brsa?logo=github&style=for-th
 
 <a href="http://www.github.com/erick-brsa"><img src="https://github-readme-stats.vercel.app/api?username=erick-brsa&show_icons=true&hide=&count_private=true&title_color=6366f1&text_color=ffffff&icon_color=6366f1&bg_color=27272a&hide_border=true&show_icons=true" alt="erick-brsa's GitHub stats" /></a>
 
-<a href="http://www.github.com/erick-brsa"><img src="https://activity-graph.herokuapp.com/graph?username=erick-brsa&bg_color=27272a&color=ffffff&line=6366f1&point=ffffff&area_color=27272a&area=true&hide_border=true&custom_title=GitHub%20Commits%20Graph" alt="GitHub Commits Graph" /></a>
-
-<a href="https://github.com/erick-brsa" align="left"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=erick-brsa&langs_count=10&title_color=6366f1&text_color=ffffff&icon_color=6366f1&bg_color=27272a&hide_border=true&locale=en&custom_title=Top%20%Languages" alt="Top Languages" /></a>
-
 <b>Top Repositories</b>
 
-<div width="100%" align="center"><a href="https://github.com/erick-brsa/laden" align="left"><img align="left" width="45%" src="https://github-readme-stats.vercel.app/api/pin/?username=erick-brsa&repo=laden&title_color=6366f1&text_color=ffffff&icon_color=6366f1&bg_color=27272a&hide_border=true&locale=en" /></a><a href="https://github.com/erick-brsa/turismo-x-mexico" align="right"><img align="right" width="45%" src="https://github-readme-stats.vercel.app/api/pin/?username=erick-brsa&repo=turismo-x-mexico&title_color=6366f1&text_color=ffffff&icon_color=6366f1&bg_color=27272a&hide_border=true&locale=en" /></a></div><br /><br /><br /><br /><br /><br /><br />
+<div width="100%" align="center"><a href="https://github.com/erick-brsa/laden-web" align="left"><img align="left" width="45%" src="https://github-readme-stats.vercel.app/api/pin/?username=erick-brsa&repo=laden&title_color=6366f1&text_color=ffffff&icon_color=6366f1&bg_color=27272a&hide_border=true&locale=en" /></a><a href="https://github.com/erick-brsa/turismo-x-mexico" align="right"><img align="right" width="45%" src="https://github-readme-stats.vercel.app/api/pin/?username=erick-brsa&repo=turismo-x-mexico&title_color=6366f1&text_color=ffffff&icon_color=6366f1&bg_color=27272a&hide_border=true&locale=en" /></a></div><br /><br /><br /><br /><br /><br /><br />
