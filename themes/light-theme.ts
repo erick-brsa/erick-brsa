@@ -1,32 +1,64 @@
-import { createTheme, Theme } from "@mui/material";
-import { grey, red } from "@mui/material/colors";
+import { createTheme, Theme } from '@mui/material';
 
 export const lightTheme: Theme = createTheme({
+	breakpoints: {
+		values: {
+			xs: 0,
+			sm: 640,
+			md: 1024,
+			lg: 1280,
+			xl: 1440
+		}
+	},
 	palette: {
-		mode: "light",
+		mode: 'light',
 		background: {
-			default: grey[300]
+			default: '#fff'
 		},
 		primary: {
-			main: "#4a148c"
+			main: '#0099FF'
 		},
 		secondary: {
-			main: "#19857b"
+			main: '#19857b'
+		}
+	},
+	typography: {
+		h1: {
+			fontFamily: 'Raleway',
+			fontWeight: 900,
+			fontSize: 64
 		},
-		error: {
-			main: red.A400
+		h2: {
+			fontFamily: 'Raleway',
+			fontWeight: 900,
+			fontSize: 48
 		},
+		h3: {
+			fontFamily: 'Raleway',
+			fontWeight: 900,
+			fontSize: 32
+		},
+		fontFamily: ['Raleway', 'Montserrat'].join(',')
 	},
 	components: {
+		MuiCssBaseline: {
+			styleOverrides: `
+				@font-face {
+					font-family: 'Inter';
+				}
+			`
+		},
 		MuiAppBar: {
 			defaultProps: {
 				elevation: 0
 			},
 			styleOverrides: {
 				root: {
-					backgroundColor: '#4a148c',
+					backgroundColor: 'rgba(255, 255, 255, 0.05)',
+					boxShadow: '2px',
+					backdropFilter: 'blur(8px)'
 				}
 			}
 		}
 	}
-})
+});

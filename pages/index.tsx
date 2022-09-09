@@ -1,18 +1,15 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
 
-const Home: NextPage = () => {
-  return (
-    <>
-      <Head>
-        <title>Erick Briones</title>
-      </Head>
+import { Layout } from '../components/layouts';
+import { Hero } from '../components/ui';
+import { Box, Grid } from '@mui/material';
 
-      <h1>
-        Hello World!
-      </h1>
-    </>
-  )
-}
+const HomePage: NextPage = () => {
+	return (
+		<Layout>
+			<Hero />
+		</Layout>
+	);
+};
 
-export default Home;
+export default HomePage;

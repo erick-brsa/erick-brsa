@@ -14,7 +14,20 @@ export const darkTheme: Theme = createTheme({
 			main: red.A400
 		},
 	},
+	typography: { 
+		fontFamily: [
+			'Raleway',
+			'Montserrat'
+		].join(','),
+	},
 	components: {
+		MuiCssBaseline: {
+			styleOverrides: `
+				@font-face {
+					font-family: 'Raleway';
+				}
+			`
+		},
 		MuiAppBar: {
 			defaultProps: {
 				elevation: 0
