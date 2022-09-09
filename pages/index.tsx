@@ -1,13 +1,13 @@
 import type { NextPage } from 'next';
 
 import { Layout } from '../components/layouts';
-import { Hero } from '../components/ui';
-import { Box, Grid } from '@mui/material';
+import { Hero, Services } from '../components/ui';
 
 const HomePage: NextPage = () => {
 	return (
 		<Layout>
 			<Hero />
+			<Services />
 		</Layout>
 	);
 };

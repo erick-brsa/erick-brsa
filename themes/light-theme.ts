@@ -38,6 +38,11 @@ export const lightTheme: Theme = createTheme({
 			fontWeight: 900,
 			fontSize: 32
 		},
+		h4: {
+			fontFamily: 'Raleway',
+			fontWeight: 900,
+			fontSize: 24
+		},
 		fontFamily: ['Raleway', 'Montserrat'].join(',')
 	},
 	components: {

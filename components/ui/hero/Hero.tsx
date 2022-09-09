@@ -24,8 +24,8 @@ export const Hero = () => {
 			container
 			maxWidth={1450}
 			marginX="auto"
-			marginY={10}
-			sx={{ paddingX: { xs: 5, md: 10 } }}
+			marginTop={12}
+			paddingX={5}
 		>
 			<Grid item xs={12} md={6} lg={5}>
 				<Box display="flex" alignItems="center" minHeight="100%">
