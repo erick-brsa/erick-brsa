@@ -81,7 +81,7 @@ export const Services = () => {
 			</Box>
 			<Grid container spacing={4} marginTop={5} marginBottom={10}>
 				{services.map((service, index) => (
-					<Grid key={index} item xs={12} md={4} xl={3}>
+					<Grid key={index} item xs={12} md={6} lg={4} xl={3}>
 						<Card
 							sx={{
 								backgroundColor: 'rgba(255,255,255,0.5)',

@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react';
 import Head from 'next/head';
 
-import { Bottombar, Navbar } from '../ui';
+import { Bottombar, Navbar, Footer } from '../ui';
 import { Container, Box } from '@mui/material';
  
 interface Props {
@@ -25,6 +25,7 @@ export const Layout: FC<Props> = ({ children, title, description }) => {
             </Box>
 
             {/* <Bottombar /> */}
+            <Footer />
         </>
     )
 }

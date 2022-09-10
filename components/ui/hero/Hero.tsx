@@ -30,10 +30,56 @@ export const Hero = () => {
 			<Grid item xs={12} md={6} lg={5}>
 				<Box display="flex" alignItems="center" minHeight="100%">
 					<Box>
-						<Typography variant="h1">Hola! soy</Typography>
-						<Typography variant="h1">Erick Briones</Typography>
-						<Typography variant="h1">Web Developer</Typography>
-						<Typography fontWeight={600} fontFamily="Inter">
+						<Typography
+							variant="h1"
+							sx={{
+								fontSize: {
+									xs: 40,
+									md: 48
+								}
+							}}
+						>
+							Hola! soy
+						</Typography>
+						<Typography
+							variant="h1"
+							sx={{
+								fontSize: {
+									xs: 40,
+									md: 48
+								}
+							}}
+						>
+							Erick Briones
+						</Typography>
+						<Typography
+							variant="h1"
+							sx={{
+								marginBottom: '4px',
+								fontSize: {
+									xs: 40,
+									md: 48
+								}
+							}}
+						>
+							Web Developer
+						</Typography>
+						<Box
+							sx={{
+								height: '2px',
+								marginBottom: '4px',
+								backgroundColor: 'red',
+								width: {
+									xs: 350,
+									xl: 380
+								}
+							}}
+						/>
+						<Typography
+							fontSize={14}
+							fontWeight={600}
+							fontFamily="Inter"
+						>
 							Desarrollador Fullstack | Diseñador UX/UI |
 							Freelance
 						</Typography>
@@ -52,7 +98,7 @@ export const Hero = () => {
 					<CardActionArea>
 						<CardMedia
 							component="img"
-							image={`https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80`}
+							image={`https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80`}
 							alt="último proyecto"
 							sx={{ borderRadius: '8px' }}
 						/>
@@ -83,7 +129,7 @@ export const Hero = () => {
 				<Box
 					sx={{
 						display: 'flex',
-						gap: { xs: '30px', md: '40px' },
+						gap: { xs: '16px', md: '40px' },
 						justifyContent: 'center',
 						marginY: 10
 					}}
