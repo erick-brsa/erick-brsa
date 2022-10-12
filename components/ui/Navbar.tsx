@@ -1,5 +1,7 @@
-import { FC, useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
+import NextLink from 'next/link';
+import { useRouter } from 'next/router';
 
 import {
 	capitalize,
@@ -20,13 +22,31 @@ import {
 } from '@mui/material';
 
 import MenuIcon from '@mui/icons-material/Menu';
-import NextLink from 'next/link';
 
 const drawerWidth = 240;
-const navItems = ['inicio', 'proyectos', 'sobre mí', 'contacto'];
+const navItems = [
+	{
+		path: '/',
+		name: 'inicio'
+	},
+	{
+		path: '/proyectos',
+		name: 'proyectos'
+	},
+	{
+		path: '/about',
+		name: 'Sobre mí'
+	},
+	{
+		path: '/contacto',
+		name: 'contacto'
+	},
+];
 
 export const Navbar = () => {
+
 	const [mobileOpen, setMobileOpen] = useState(false);
+	const router = useRouter();
 
 	const handleDrawerToggle = () => {
 		setMobileOpen(!mobileOpen);
@@ -40,9 +60,9 @@ export const Navbar = () => {
 			<Divider />
 			<List>
 				{navItems.map((item) => (
-					<ListItem key={item} disablePadding>
+					<ListItem key={item.name} disablePadding>
 						<ListItemButton sx={{ textAlign: 'center' }}>
-							<ListItemText primary={item} />
+							<ListItemText primary={item.name} />
 						</ListItemButton>
 					</ListItem>
 				))}
@@ -69,17 +89,18 @@ export const Navbar = () => {
 							}}
 						>
 							{navItems.map((item) => (
-								<NextLink href={`/${item}`} key={item} passHref>
+								<NextLink href={item.path} key={item.name} passHref>
 									<Link
 										underline="none"
 										fontFamily="Raleway"
-										fontSize={20}
-										fontWeight={500}
+										fontSize={16}
+										fontWeight={router.pathname === item.path ? 600 : 500}
 										sx={{
-											color: '#000'
+											color: '#000',
+											borderBottom: router.pathname === item.path ? '2px solid #0099FF' : 'none'
 										}}
 									>
-										{capitalize(item)}
+											{capitalize(item.name)}
 									</Link>
 								</NextLink>
 							))}

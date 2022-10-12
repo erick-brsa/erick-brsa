@@ -5,9 +5,6 @@ import {
 	Box,
 	Card,
 	CardActionArea,
-	CardActions,
-	CardContent,
-	CardHeader,
 	CardMedia,
 	IconButton
 } from '@mui/material';
@@ -17,6 +14,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import ChevronRightOutlined from '@mui/icons-material/ChevronRightOutlined';
 
 export const Hero = () => {
 	return (
@@ -24,65 +22,100 @@ export const Hero = () => {
 			container
 			maxWidth={1450}
 			marginX="auto"
-			marginTop={12}
+			// marginTop={12}
 			paddingX={5}
+			sx={{
+				marginTop: { xs: 2, md: 6, xl: 12 }
+			}}
 		>
-			<Grid item xs={12} md={6} lg={5}>
-				<Box display="flex" alignItems="center" minHeight="100%">
+			<Grid
+				item
+				xs={12}
+				md={6}
+				lg={5}
+				sx={{ display: 'grid', placeItems: 'center' }}
+			>
+				<Box
+					display="flex"
+					flexDirection="column"
+					justifyContent="center"
+					alignItems="center"
+					gap={4}
+				>
 					<Box>
 						<Typography
 							variant="h1"
-							sx={{
-								fontSize: {
-									xs: 40,
-									md: 48
-								}
-							}}
+							sx={{ fontSize: { xs: 40, md: 48 } }}
 						>
-							Hola! soy
+							<span
+								style={{ display: 'block', color: '#3D4651' }}
+							>
+								Hola! soy
+							</span>
+							<span
+								style={{
+									display: 'block',
+									background:
+										'linear-gradient(93.34deg, #D96DF4 3.83%, #F59944 77.55%)',
+									WebkitBackgroundClip: 'text',
+									WebkitTextFillColor: 'transparent'
+								}}
+							>
+								Erick Briones
+							</span>
+							<span
+								style={{
+									display: 'block',
+									background:
+										'linear-gradient(93.24deg, #C47BFD -1.66%, #23AFFE 78.32%)',
+									WebkitBackgroundClip: 'text',
+									WebkitTextFillColor: 'transparent'
+								}}
+							>
+								Web Developer
+							</span>
 						</Typography>
-						<Typography
-							variant="h1"
-							sx={{
-								fontSize: {
-									xs: 40,
-									md: 48
-								}
-							}}
-						>
-							Erick Briones
-						</Typography>
-						<Typography
-							variant="h1"
-							sx={{
-								marginBottom: '4px',
-								fontSize: {
-									xs: 40,
-									md: 48
-								}
-							}}
-						>
-							Web Developer
-						</Typography>
-						<Box
-							sx={{
-								height: '2px',
-								marginBottom: '4px',
-								backgroundColor: 'red',
-								width: {
-									xs: 350,
-									xl: 380
-								}
-							}}
-						/>
 						<Typography
 							fontSize={14}
 							fontWeight={600}
 							fontFamily="Inter"
 						>
-							Desarrollador Fullstack | Diseñador UX/UI |
-							Freelance
+							Desarrollador Fullstack | Diseñador UX/UI | Freelance
 						</Typography>
+					</Box>
+
+					<Box
+						justifyContent="space-between"
+						display="flex"
+						width="100%"
+					>
+						<Button
+							size="medium"
+							variant="outlined"
+							sx={{
+								textTransform: 'none',
+								fontSize: 16,
+								fontWeight: 600,
+								borderWidth: 2,
+								":hover": {
+									borderWidth: 2,
+								}
+							}}
+						>
+							Ver proyectos
+						</Button>
+						<Button
+							size="medium"
+							variant="text"
+							sx={{
+								textTransform: 'none',
+								fontSize: 16,
+								fontWeight: 600
+							}}
+							endIcon={<ChevronRightOutlined />}
+						>
+							Trabajemos juntos
+						</Button>
 					</Box>
 				</Box>
 			</Grid>

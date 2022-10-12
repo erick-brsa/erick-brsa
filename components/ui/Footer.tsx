@@ -9,15 +9,36 @@ import {
 } from '@mui/material';
 
 import NextLink from 'next/link';
+import { useRouter } from 'next/router';
+
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 
-const navItems = ['inicio', 'proyectos', 'sobre mí', 'contacto'];
+const navItems = [
+	{
+		path: '/',
+		name: 'inicio'
+	},
+	{
+		path: '/proyectos',
+		name: 'proyectos'
+	},
+	{
+		path: '/about',
+		name: 'Sobre mí'
+	},
+	{
+		path: '/contacto',
+		name: 'contacto'
+	}
+];
 
 export const Footer = () => {
+	const router = useRouter();
+
 	return (
 		<Box>
 			<Container component="footer" sx={{ mt: 8, mb: 2 }} maxWidth="xl">
@@ -44,16 +65,26 @@ export const Footer = () => {
 										}
 									}}
 								>
-									Erick Briones
+									<span
+										style={{
+											display: 'block',
+											background:
+												'linear-gradient(93.34deg, #D96DF4 3.83%, #F59944 77.55%)',
+											WebkitBackgroundClip: 'text',
+											WebkitTextFillColor: 'transparent'
+										}}
+									>
+										Erick Briones
+									</span>
 								</Typography>
 								<Box
 									sx={{
 										height: '2px',
-										backgroundColor: 'red',
-										width: {
-											xs: 370,
-											xl: 420
-										}
+										background: 'linear-gradient(90deg, #EE1BD9 -1.09%, #E3740E 100.97%)',
+										// width: {
+										// 	xs: 370,
+										// 	xl: 420
+										// }
 									}}
 								/>
 								<Typography
@@ -92,7 +123,12 @@ export const Footer = () => {
 					</Grid>
 					<Grid xs={12} md={6} lg={4} item></Grid>
 					<Grid xs={12} md={6} lg={4} item>
-						<Box display="flex" flexDirection="column" gap="16px" alignItems='center'>
+						<Box
+							display="flex"
+							flexDirection="column"
+							gap="16px"
+							alignItems="center"
+						>
 							<Box
 								sx={{
 									display: { xs: 'none', md: 'flex' },
@@ -101,20 +137,29 @@ export const Footer = () => {
 							>
 								{navItems.map((item) => (
 									<NextLink
-										href={`/${item}`}
-										key={item}
+										href={item.path}
+										key={item.name}
 										passHref
 									>
 										<Link
 											underline="none"
 											fontFamily="Raleway"
-											fontSize={20}
-											fontWeight={500}
+											fontSize={16}
+											fontWeight={
+												router.pathname === item.path
+													? 600
+													: 500
+											}
 											sx={{
-												color: '#000'
+												color: '#000',
+												borderBottom:
+													router.pathname ===
+													item.path
+														? '2px solid #0099FF'
+														: 'none'
 											}}
 										>
-											{capitalize(item)}
+											{capitalize(item.name)}
 										</Link>
 									</NextLink>
 								))}
@@ -124,12 +169,14 @@ export const Footer = () => {
 								flexDirection="column"
 								gap="8px"
 							>
-								<Typography>
+								<Typography fontSize={14} align="center">
 									“No tienes que ser un genio, un visionario o
 									graduado para tener éxito. Todo lo que
 									necesitas es perspectiva y un sueño”.
 								</Typography>
-								<Typography align='center'>- Michael Dell</Typography>
+								<Typography align="center">
+									- Michael Dell
+								</Typography>
 							</Box>
 						</Box>
 					</Grid>
